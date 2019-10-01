@@ -8,14 +8,15 @@ import ItemList from '../components/ItemList';
 
 function mapStateToProps(state) {
   return {
-    items: state.items
+    items: state.items,
+    inventory: state.inventory
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    add: () => dispatch(add()),
-    remove: () => dispatch(remove())
+    add: (data, id) => dispatch(add(data, id)),
+    remove: (id) => dispatch(remove(id))
   }
 }
 
