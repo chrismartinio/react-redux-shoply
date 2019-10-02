@@ -9,7 +9,10 @@ class ItemList extends React.Component {
       <Item item={item[1]} id={item[0]} key={item[0]} add={this.props.add} remove={this.props.remove} />
     ))
 
+    console.log('items', this.props.items);
+
     return (
+      
       <div>
         <h1>Items</h1>
         <h3>Cart: {this.props.items.length}</h3>
